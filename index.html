@@ -91,7 +91,10 @@
             }
         }
 
-        .profile img,
+        .profile img {
+            transition: transform 0.3s ease;
+        }
+
         .proj-card img {
             transition: transform 0.3s ease;
             filter: grayscale(100%) brightness(50%) saturate(0%);
@@ -176,13 +179,11 @@
         <div class="container px-4">
             <h2 class="text-center mb-4">About Me</h2>
             <div class="row align-items-center justify-content-center">
-                <!-- Profile Image -->
-                <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+                <div class="profile col-12 col-md-4 text-center mb-4 mb-md-0">
                     <img src="images/profile.png" alt="Profile Picture" class="img-fluid rounded-circle shadow"
                         style="max-width: 250px;">
                 </div>
 
-                <!-- About Card -->
                 <div class="col-12 col-md-8">
                     <div class="card p-4 rounded-4 bg-white shadow-sm text-center text-md-start">
                         <p>
