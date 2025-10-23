@@ -1,0 +1,112 @@
+* {
+  transition: 500ms;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.custom-navbar {
+  position: sticky;
+  top: 20px;
+  z-index: 1030;
+  width: calc(100% - 2rem);
+  max-width: 1150px;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+.navbar-nav .nav-link {
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 0.7rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #212529;
+  background-color: #f5f5f5;
+}
+
+.hero {
+  position: relative;
+  background: url("../images/bgp.png") center/cover no-repeat;
+  color: #fff;
+  padding: 80px 20px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero h1,
+.hero h5,
+.hero h6,
+.hero a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero h1 {
+  animation-delay: 0.2s;
+}
+
+.hero h5 {
+  animation-delay: 0.4s;
+}
+
+.hero a {
+  animation-delay: 0.6s;
+}
+
+.hero h6 {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile img {
+  transition: transform 0.3s ease;
+}
+
+.proj-card img {
+  transition: transform 0.3s ease;
+  filter: grayscale(100%) brightness(50%) saturate(0%);
+}
+
+.profile img:hover,
+.proj-card img:hover {
+  transform: scale(1.05);
+}
+
+.contact-card {
+  background-color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  background-color: #212529;
+  color: #ffffff;
+}
