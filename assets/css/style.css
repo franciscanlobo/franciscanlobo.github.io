@@ -35,52 +35,25 @@ h2 {
   color: #f3c632;
 }
 
-.hero {
-  position: relative;
-  background: url("../images/bgp.png") center/cover no-repeat;
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/bgp.png") center/cover no-repeat;
   color: #fff;
-  padding: 80px 20px;
   border-radius: 1rem;
-  overflow: hidden;
+  padding: 60px 20px;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+.badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease;
 }
 
-.hero h1,
-.hero h5,
-.hero h6,
-.hero a {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
-}
-
-.hero h1 {
-  animation-delay: 0.2s;
-}
-
-.hero h5 {
-  animation-delay: 0.4s;
-}
-
-.hero a {
-  animation-delay: 0.6s;
-}
-
-.hero h6 {
-  animation-delay: 0.8s;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.badge:hover {
+  transform: translateY(-2px);
+  background-color: #f3c632;
+  color: #000;
 }
 
 .socials {
@@ -102,6 +75,16 @@ h2 {
 
 .profile img:hover {
   transform: scale(1.05);
+}
+
+.tech-card {
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-card:hover {
+  border-color: #f3c632;
+  transform: translateY(-4px);
 }
 
 .proj-card {
@@ -168,11 +151,12 @@ h2 {
 .contact-card {
   background-color: #ffffff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #f3c632;
 }
 
 footer {
